@@ -1,10 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.cp1.department;
 
-
+package com.cp1.employee;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -35,6 +33,8 @@ class Employee {
     private String email;
     //-phoneNumber:String
     private String phoneNumber;
+    private int newDepartmentId;
+    private double newsalary;
     
     public Employee (int employeeId,String firstName, String lastName, LocalDate birthdate, 
             LocalDate hireDate, int positionId, double salary, String email, String phoneNumber) {
@@ -84,7 +84,7 @@ class Employee {
 }
     //+setSalary(newSalary:double)::void
     public void setSalary (double newSalary) {
-        this.salary = newsalary;
+        this.salary = newSalary;
 }
     //+getEmail()::String
     public String getEmail() {
@@ -123,7 +123,7 @@ class Employee {
 }
     //changeDepartment(newDepartmentId:int)::void
     public void changeDepartment (int newDepartment) {
-     this.departmentId = newDepartmentId;
-        System.out.println("Department changed to: " + newDepartmentId);   
+     this.departmentId = newDepartment;
+        System.out.println("Department changed to: " + newDepartment);
 }
 }
