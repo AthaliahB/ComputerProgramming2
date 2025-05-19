@@ -1,12 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.cp1.department;
+package com.cp1.employee;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
 /**
  *
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Department {
 
-    //-departmetnId:int
+    //-departmentId:int
     private int departmentId;
     //-departmentName: String
     private String departmentName;
@@ -35,13 +35,13 @@ public class Department {
     //+addEmployee(employee:Employee)::void
     public void addEmployee(Employee employee) {
         employees.add(employee);
-        System.out.println("Employee added: " + employee.getName());
+        System.out.println("Employee added: " + employee.getFirstName() + " " + employee.getLastName());
 }
     //+removeEmployee(employeeId:int)::void
     public void removeEmployee (int employeeId) {
      Employee toRemove = null;
      for(Employee emp : employees) {
-         if (emp.getId() == employeeId) {
+         if (emp.getEmployeeId() == employeeId) {
              toRemove = emp;
              break;
          }
@@ -59,4 +59,6 @@ public class Department {
         return new ArrayList<>(employees);
     }
 }
+
+
 
