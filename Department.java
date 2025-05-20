@@ -3,15 +3,6 @@ package com.cp1.employee;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author athaliah
- */
 public class Department {
 
     //-departmentId:int
@@ -26,8 +17,12 @@ public class Department {
     public Department(int departmentId, String departmentName) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
-    }
-    
+        this.employees = new ArrayList<>();
+}
+    //+getDepartmentId():: int
+    public int getDepartmentId() {
+    return departmentId;
+}
     //+getDepartmentName()::String
     public String getDepartmentName() {
     return departmentName;
@@ -48,7 +43,7 @@ public class Department {
      }
      if (toRemove != null) {
          employees.remove(toRemove);
-         System.out.println("Employee ID "+ + employeeId + " is removed!");
+         System.out.println("Employee ID "+ employeeId + " is removed!");
 } else {
          System.out.println("Employee ID Number:" + employeeId + "not Found!");
      }
