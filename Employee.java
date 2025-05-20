@@ -1,16 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+
 
 package com.cp1.employee;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-/**
- *
- * @author athaliah
- */
+
 class Employee {
    
     //-employeeId:int
@@ -33,10 +28,9 @@ class Employee {
     private String email;
     //-phoneNumber:String
     private String phoneNumber;
-    private int newDepartmentId;
-    private double newsalary;
+   
     
-    public Employee (int employeeId,String firstName, String lastName, LocalDate birthdate, 
+    public Employee (int employeeId,String firstName, String lastName, LocalDate birthDate, 
             LocalDate hireDate, int positionId, double salary, String email, String phoneNumber) {
         this.employeeId = employeeId;
         this.firstName = firstName;
@@ -58,6 +52,10 @@ class Employee {
     public String getFirstName() {
     return firstName;
 }
+    //+setFirstName(firstName:String) :: void
+    public void setFirstName(String firstName) {
+    this.firstName = firstName;
+}
     //+getLastName()::String
     public String getLastName() {
     return lastName;  
@@ -69,6 +67,10 @@ class Employee {
     //+getBirthDate()::Date
     public LocalDate getBirthDate() {
         return birthDate;
+}
+    //+setBirthDate (birthDate:LocalDate)::void
+    public void setBirthDate(LocalDate birthDate) {
+    this.birthDate = birthDate;
 }
     //+getHireDate()::Date
     public LocalDate getHireDate() {
